@@ -20,5 +20,5 @@ jobs:
     steps: 
       - checkout
       - run: pip install gpu_tpu_lab_server
-      - run: from gpu_tpu_lab_server.core import jupyter_lab, vscode, run_process_in_background, run_process_in_foreground
+      - run: import jupyter_lab, vscode, run_process_in_background, run_process_in_foreground
       - run: vscode()
