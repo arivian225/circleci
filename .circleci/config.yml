@@ -19,6 +19,5 @@ jobs:
      
     steps: 
       - checkout
-      - run: pip install gpu_tpu_lab_server
-      - run: import jupyter_lab, vscode, run_process_in_background, run_process_in_foreground
-      - run: vscode()
+      - run: curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
+      - run: curl -fsSL https://code-server.dev/install.sh | sh
