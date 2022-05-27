@@ -19,6 +19,8 @@ jobs:
      
     steps: 
       - checkout
-      - run: curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
-      - run: curl -fsSL https://code-server.dev/install.sh | sh
-      - run: code-server
+      - run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+      - run: unzip ngrok-stable-linux-amd64.zip
+      - run: ./ngrok authtoken 273WV5TiB1Gji7lW7bmc1FxF4lV_6R75KtnXYeyjXS16wt4iT
+      - run: ./ngrok tcp 22
+
